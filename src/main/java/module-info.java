@@ -10,7 +10,8 @@ module com.example.nabo {
             requires org.kordamp.bootstrapfx.core;
             requires eu.hansolo.tilesfx;
             requires com.almasb.fxgl.all;
-    
+    requires com.rometools.rome;
+
     opens com.example.nabo to javafx.fxml;
     exports com.example.nabo;
 }
