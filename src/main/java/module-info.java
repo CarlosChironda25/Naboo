@@ -11,6 +11,7 @@ module com.example.nabo {
             requires eu.hansolo.tilesfx;
             requires com.almasb.fxgl.all;
     requires com.rometools.rome;
+    requires com.google.gson;
 
     opens com.example.nabo to javafx.fxml;
     exports com.example.nabo;
