@@ -10,7 +10,7 @@
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="588.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.projectnaboo.HelloController">
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="588.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.nabo.HelloController">
    <children>
       <SplitPane dividerPositions="0.38545150501672243" layoutX="112.0" layoutY="134.0" prefHeight="588.0" prefWidth="600.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
         <items>
@@ -23,7 +23,7 @@
                   </Label>
                   <ImageView fx:id="immagine" fitHeight="150.0" fitWidth="219.0" layoutX="14.0" layoutY="267.0" pickOnBounds="true" preserveRatio="true">
                      <image>
-                        <Image url="@notiza.jpeg" />
+                         <Image url="@../../../../../../src/main/resources/com/example/nabo/notiza.jpeg" />
                      </image>
                   </ImageView>
                </children>
@@ -40,7 +40,7 @@
                   </Button>
                   <ImageView fx:id="lucchetto" fitHeight="95.0" fitWidth="96.0" layoutX="138.0" layoutY="14.0" pickOnBounds="true" preserveRatio="true">
                      <image>
-                        <Image url="@../../../../../../target/classes/com/example/projectnaboo/lucchetto.png" />
+                        <Image url="@../../../../../../src/main/resources/com/example/nabo/lucchetto.jpeg" />
                      </image>
                   </ImageView>
                   <PasswordField fx:id="txtPassword" layoutX="128.0" layoutY="212.0" promptText="Password" />
