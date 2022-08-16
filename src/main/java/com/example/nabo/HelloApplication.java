@@ -22,3 +22,17 @@ public class HelloApplication extends Application {
         launch();
     }
 }
+/*
+echo "# Naboo" >> README.md
+git init
+git add README.md
+git commit -m "first commit"
+git branch -M main
+git remote add origin https://github.com/CarlosChironda25/Naboo.git
+git push -u origin main
+////
+git remote add origin https://github.com/CarlosChironda25/Naboo.git
+git branch -M main
+
+
+ */
