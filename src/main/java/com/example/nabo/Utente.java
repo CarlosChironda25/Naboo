@@ -1,15 +1,23 @@
 package com.example.nabo;
 
-import com.almasb.fxgl.core.collection.Array;
-
 import java.util.ArrayList;
 
-public class Utenete {
-private String  Username;
-private  String Password;
-private ArrayList< String> tipo= new ArrayList<>();
+public class Utente {
+public String  Username;
+public   String Password;
 
-    public Utenete(String username, String password, ArrayList<String> tipo) {
+    public boolean isAdmin() {
+        return Admin;
+    }
+
+    public void setAdmin(boolean admin) {
+        Admin = admin;
+    }
+
+    public  boolean Admin;
+public ArrayList< String> tipo= new ArrayList<>();
+
+    public Utente(String username, String password, ArrayList<String> tipo) {
         Username = username;
         Password = password;
         this.tipo = tipo;
@@ -44,6 +52,7 @@ private ArrayList< String> tipo= new ArrayList<>();
         return "Utenete{" +
                 "Username='" + Username + '\'' +
                 ", Password='" + Password + '\'' +
+                ", Admi='" + Admin + '\'' +
                 ", tipo=" + tipo +
                 '}';
     }

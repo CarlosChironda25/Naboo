@@ -1,13 +1,16 @@
 package com.example.nabo;
 
+import java.io.FileReader;
 import java.io.FileWriter;
 import java.io.IOException;
 import java.net.MalformedURLException;
 import java.net.URL;
+import java.util.Date;
 import java.util.Iterator;
 import java.util.List;
 
 import com.almasb.fxgl.core.collection.Array;
+import com.rometools.rome.feed.synd.SyndContent;
 import org.xml.sax.InputSource;
 
 import com.rometools.rome.feed.synd.SyndEntry;
@@ -41,18 +44,19 @@ private static Array< Notizia>list= new Array<>();
                 List<SyndEntry> entries = feed.getEntries();
 
                 Iterator<SyndEntry> itEntries = entries.iterator();
-                for (Notizia i : list) {
                 while (itEntries.hasNext()) {
 
                     SyndEntry entry = itEntries.next();
-                    Notizia notizia =new Notizia(entry.getPublishedDate(),entry.getTitle(),entry.getLink(),
-                              entry.getDescription(), entry.getAuthor(), entry.getSource());
+                    //Date tempo, String title, String link,SyndContent discrizione, String autore, SyndFeed fonte
+                   Notizia notizia =new Notizia((Date) entry.getPublishedDate(),entry.getTitle(),entry.getLink(),entry.getDescription(),entry.getAuthor(), entry.getSource());
+                    Gson gson4 = new GsonBuilder().setPrettyPrinting().create();
+                    String jsonString = gson4.toJson(notizia);
+                    FileWriter fileWriter = new FileWriter("src/main/resources/com/example/nabo/Info-Notizie.json");
+                    fileWriter.println(jsonString);
+                    // .write(jsonString);
+                    fileWriter.close();
 
-                        // i.seNtTempo(entry.getPublishedDate());
-                        //fileWriter.write(i.getTitle() );
-                        System.out.println(i.toString());
 
-                    }
 
                 }
             } catch (IllegalArgumentException | FeedException | IOException e) {

@@ -1,42 +1,32 @@
-{
-  "Utente": [
-    {
-      "Username": " Davide ",
-      "Password": "  Davide12",
-      "Categoria": [
-        {
-          "Tipo": "Leitore"
-        }
-      ],
-      "Username": " Carlos ",
-      "Password": "  Carlos12",
-      "Categoria": [
-        {
-          "Tipo": "Commetattore"
-        }
-      ],
-      "Username": " Elena ",
-      "Password": "  Elena12",
-      "Categoria": [
-        {
-          "Tipo": "Generale"
-        }
-      ]
-    }
-  ],
-  "Ammistrattore": [
-    {
-      "Username": "Elena",
-      "Username": "Donatelli"
-    }
-  ],
-  "Ammistrattore": [
-    {
-      "Username": "Davide",
-      "Username": "Davide"
-    }
-  ]
-}
-
-
-
+[
+  {
+    "Username": "Davide",
+    "Password": "Davide12",
+    "Admin": true,
+    "Categoria": [
+      {
+        "Tipo": "Abbonato"
+      }
+    ]
+  },
+  {
+    "username": "Carlos",
+    "password": "Carlos12",
+    "admin": true,
+    "Categoria": [
+      {
+        "Tipo": "Lettore"
+          }
+    ]
+},
+  {
+    "username": "Elena",
+    "password": "Elena12",
+    "admin": false,
+    "Categoria": [
+      {
+        "Tipo": "Tutto"
+      }
+    ]
+  }
+    ]

@@ -8,12 +8,12 @@ import java.util.Date;
 
 public class Notizia {
 
-      private Date tempo;
-      private  String title;
-      private String link;
-      private SyndContent Discrizione;
-      private  String Autore;
-      private  SyndFeed Fonte;
+      public Date tempo;
+      public   String title;
+      public String link;
+      public SyndContent Discrizione;
+      public  String Autore;
+      public   SyndFeed Fonte;
 
     public Notizia(Date tempo, String title, String link,
                    SyndContent discrizione, String autore, SyndFeed fonte) {
