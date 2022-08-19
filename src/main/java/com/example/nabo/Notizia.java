@@ -79,13 +79,13 @@ public class Notizia {
 
     @Override
     public String toString() {
-        return "Notizia{" +
+        return "[Notizia{" +
                 "tempo=" + tempo +
                 ", title='" + title + '\'' +
                 ", link='" + link + '\'' +
                 ", Discrizione='" + Discrizione + '\'' +
                 ", Autore='" + Autore + '\'' +
                 ", Fonte='" + Fonte + '\'' +
-                '}';
+                "}]";
     }
 }

@@ -1,10 +1,12 @@
-package com.example.nabo;
+/*package com.example.nabo;
 
 import java.io.FileReader;
 import java.io.FileWriter;
 import java.io.IOException;
 import java.net.MalformedURLException;
 import java.net.URL;
+import java.net.http.HttpClient;
+import java.util.ArrayList;
 import java.util.Date;
 import java.util.Iterator;
 import java.util.List;
@@ -27,7 +29,7 @@ import java.io.FileNotFoundException;
 
 public class Rss {
 private static Array< Notizia>list= new Array<>();
-    public static void main(String[] args) {
+    public static  void main(String[] args) {
 
         System.out.println("Esempio libreria Rome RSS: dati ANSA");
 
@@ -51,14 +53,12 @@ private static Array< Notizia>list= new Array<>();
                    Notizia notizia =new Notizia((Date) entry.getPublishedDate(),entry.getTitle(),entry.getLink(),entry.getDescription(),entry.getAuthor(), entry.getSource());
                     Gson gson4 = new GsonBuilder().setPrettyPrinting().create();
                     String jsonString = gson4.toJson(notizia);
-                    FileWriter fileWriter = new FileWriter("src/main/resources/com/example/nabo/Info-Notizie.json");
-                    fileWriter.println(jsonString);
-                    // .write(jsonString);
-                    fileWriter.close();
-
-
-
-                }
+                       ArrayList<Notizia> n= new ArrayList<>();
+                             FileWriter fileWriter = new FileWriter("src/main/resources/com/example/nabo/Info-Notizie.json");
+                             fileWriter.write(jsonString);
+                             fileWriter.close();
+                    System.out.println(notizia);
+                                             }
             } catch (IllegalArgumentException | FeedException | IOException e) {
                 // Errore lettura feed
                 e.printStackTrace();
@@ -68,7 +68,21 @@ private static Array< Notizia>list= new Array<>();
             // Errore indirizzo e accesso ai feed
             e.printStackTrace();
         }
+       /* try {
 
+
+        Gson gson= new Gson();
+        JsonReader leggi = new JsonReader(new FileReader("src/main/resources/com/example/nabo/Info-Notizie.json"));
+        List<Notizia> notizias = gson.fromJson(leggi, (new TypeToken<List<Notizia>>() {}).getType());
+            for (Notizia i:notizias
+                 ) {
+                System.out.println(i.link);
+
+            }
+    }catch ( IOException e){
+            System.out.println("non trovato");
+        }
     }
 
 }
+*/
