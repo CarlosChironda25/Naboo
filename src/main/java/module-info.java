@@ -13,6 +13,8 @@ module com.example.nabo {
     requires com.rometools.rome;
     requires com.google.gson;
     requires java.net.http;
+    requires telegrambots;
+    requires telegrambots.meta;
 
     opens com.example.nabo to javafx.fxml;
     exports com.example.nabo;
