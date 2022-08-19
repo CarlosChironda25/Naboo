@@ -52,16 +52,17 @@ public class GestoreNotizia {
 
        public static void main(String[] args) throws IOException {
            FileWriter fileWriter = new FileWriter("src/main/resources/com/example/nabo/Info-Notizie.json");
-
+           fileWriter.write( "[");
            String source = "http://xml2.corriereobjects.it/rss/homepage.xml";
              GestoreNotizia gestoreNotizia= new GestoreNotizia( source);
               System.out.println( gestoreNotizia.getNotizia());
    for( Notizia i : gestoreNotizia.getNotizia()) {
           Gson gson4 = new GsonBuilder().setPrettyPrinting().create();
           String jsonString = gson4.toJson(i);
-          fileWriter.write(jsonString+ ",");
+          fileWriter.write(jsonString + ",");
 
-   } fileWriter.close();
+   }  fileWriter.write( " {} ]");
+   fileWriter.close();
 
        }
 }
