@@ -26,8 +26,9 @@ public class HelloController {
 
     public void Login(ActionEvent event) throws IOException {
 
-        if(txtUsername.getText().equals("Amministratore") && txtPassword.getText().equals("Password")) {
+        if(txtUsername.getText().equals("A") && txtPassword.getText().equals("P")) {
             FXMLLoader fxmlLoader = new FXMLLoader(HelloApplication.class.getResource("SchermataPrincipale.fxml"));
+
             Scene scene = new Scene(fxmlLoader.load());
             Stage stage = new Stage();
             stage.setTitle("NABOO");
