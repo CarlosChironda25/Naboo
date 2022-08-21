@@ -34,6 +34,7 @@ public class HelloController {
             stage.setTitle("NABOO");
             stage.setScene(scene);
             stage.show();
+
         } else
             lblMessaggio.setText("Username e Password non corretti");
 

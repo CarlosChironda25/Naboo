@@ -1,0 +1,11 @@
+.root{
+     -fxbackground-color: "black";
+}
+ .Label{
+       -fx-font-size: 20;
+         -fx-text-fill: "Black";
+ }
+
+#TitleLabel{
+      --fxbackground-color: "black";
+}

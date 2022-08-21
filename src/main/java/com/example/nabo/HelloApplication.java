@@ -2,28 +2,40 @@ package com.example.nabo;
 
 
 import javafx.application.Application;
+import javafx.event.EventHandler;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Group;
 import javafx.scene.Node;
+import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.stage.Stage;
 import javafx.scene.paint.Color;
+import javafx.stage.StageStyle;
+import org.w3c.dom.events.MouseEvent;
 
 import java.io.IOException;
+import java.lang.reflect.InvocationTargetException;
+import java.lang.reflect.Parameter;
+import java.util.Objects;
 
 public class HelloApplication extends Application {
+
+
     @Override
-    public void start(Stage stage) throws IOException {
-        FXMLLoader fxmlLoader = new FXMLLoader(HelloApplication.class.getResource("Login.fxml"));
-        Group group= new Group();
-        Scene scene = new Scene(fxmlLoader.load(),Color.DARKRED );
-        stage.setTitle("NABOO");
+    public void start(Stage stage) throws Exception {
+        Parent root = FXMLLoader.load(Objects.requireNonNull(HelloApplication.class.getResource("Login.fxml")));
+        Scene scene = new Scene(root);
         stage.setScene(scene);
+       //scene.getStylesheets().add( Objects.requireNonNull(getClass().getResource("GraficeColor.css")).toExternalForm());
+         String css= (this.getClass().getResource("GraficeColor.css")).toExternalForm();
+           scene.getStylesheets().add(css);
+
         stage.show();
     }
 
+
     public static void main(String[] args) {
-        launch();
+        launch(args);
     }
 }
 /*
@@ -38,51 +50,5 @@ git push -u origin main
 git remote add origin https://github.com/CarlosChironda25/Naboo.git
 git branch -M main
  ssh-keygen -t ed25519 -C "carlosvasco.chironda@studio.unibo.it"
-
-
-//
-[{
-  "Utente": [
-    {
-      "Username": " Davide ",
-      "Password": "  Davide12",
-      "Categoria": [
-        {
-          "Tipo": "Leitore"
-        }
-      ],
-      "Username": " Carlos ",
-      "Password": "  Carlos12",
-      "Categoria": [
-        {
-          "Tipo": "Commetattore"
-        }
-      ],
-      "Username": " Elena ",
-      "Password": "  Elena12",
-      "Categoria": [
-        {
-          "Tipo": "Generale"
-        }
-      ]
-    }
-  ],
-  "Ammistrattore": [
-    {
-      "Username": "Elena",
-      "Username": "Donatelli"
-    }
-  ],
-  "Ammistrattore": [
-    {
-      "Username": "Davide",
-      "Username": "Davide"
-    }
-  ]
-}
-  ]
-
-
-
 
  */
